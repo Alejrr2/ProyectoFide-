@@ -20,3 +20,25 @@ distrito= input ("Distrito:") #almacena el distrito para la facturacion
 
 
 #Ingreso de datos para creación de paquetes
+print ("Los siguientes datos son requeridos para la creación de los paquetes:")
+nombredestinatario=input("Ingrese el nombre del destinario: ")
+telefonodestinatario= input("Ingrese el numero de telefono del destinario: ")
+ceduladestinario= input("Ingrese el numero de cedula del destinario: ")
+pesopaquete= input("Ingrese el peso en kilogramos del paquete: ")
+pagocontraentrega= int(input("Digite 1 si desea la opción de *Pago Contra Entrega*: "))
+if pagocontraentrega==1:
+    montoacobrar=int(input("Ingrese el monto a cobrar a la hora de realizar la entrega: "))                            
+
+#Creación de Guías 
+tracking=0
+opcion=int(input("Ingrese 1 para desglosar la información de su guía: "))
+while opcion==1:
+    print("Información de Guía")
+    print("*Número de Guía:", tracking,"*")
+    tracking=tracking+1
+    print("-Infromación de Comercio: \n","Nombre del Comercio: ",nombrecomercio,"\n","Telefono: ",telefonocomercio,"\n")
+    print("-Información del Destinatario: \n","Nombre: ",nombredestinatario,"\n","Teléfono: ",telefonodestinatario)
+    #Si requiere cobro
+    if pagocontraentrega==1:
+        print("Su monto a pagar es de: ",montoacobrar)
+    break
