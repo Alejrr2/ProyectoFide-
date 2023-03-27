@@ -42,3 +42,19 @@ while opcion==1:
     if pagocontraentrega==1:
         print("Su monto a pagar es de: ",montoacobrar)
     break
+#Cambio de estados del paquete
+
+estado= int(input("Ingrese el nuevo estado del paquete"  
+                   " 1=Creado" 
+                   " 2=Recolectado" 
+                   " 3=Entrega fallida" 
+                   " 4=Entregado"))
+if estado==1:
+    print("El estado del paquete es: Creado")
+elif estado==2:
+    print("El estado del paquete es: Recolectado")
+elif estado==3:
+    print("El estado del paquete es: Entrega fallida")
+elif estado==4:
+    print("El estado del paquete es: Entregado")
+    
